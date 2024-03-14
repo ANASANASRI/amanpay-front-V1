@@ -1,3 +1,4 @@
+import { Option } from './../../model/option/option.module';
 import { AfterViewInit, Component, ContentChild, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, TemplateRef, ViewChild } from '@angular/core';
 import { SlideConfig } from '../../models/slide-config.model';
 
@@ -8,14 +9,22 @@ import { SlideConfig } from '../../models/slide-config.model';
 })
 export class SliderComponent implements OnInit, AfterViewInit {
 
-  items: string[] = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
   
-  // @Input('items')
-  // items: string[] = [];
+  @Input('items')
+  items: Option[] = [
+    { id: 1, name: 'Card', url: 'https://img.lovepik.com/free-png/202109/lovepik-credit-card-png-image_400174222_wh1200.png' },
+    { id: 2, name: 'Token', url: 'https://picsum.photos/200/300.jpg' },
+    { id: 3, name: 'Aman Pay', url: 'https://picsum.photos/200/300.jpg' },
+    { id: 4, name: 'Pay direct', url: 'Description of Pay direct' },
+    { id: 5, name: 'Option 5', url: 'Description of Option 5' },
+    { id: 6, name: 'Option 6', url: 'Description of Option 6' },
+    { id: 7, name: 'Option 7', url: 'Description of Option 7' },
+  ];
+  
 
   dots: number[] = [];
   activeSlideID = 1;
-  
+
   @ContentChild('template')
   template: TemplateRef<any> | undefined;
 
@@ -85,14 +94,14 @@ export class SliderComponent implements OnInit, AfterViewInit {
   }
 //////////////////////////////////////////////////////////////////////////////////////////
 
-  prev() {
-    console.log(this.sliderMarginLeft)
-    if (this.sliderMarginLeft === 0) {
-      return
-    }
-    this.activeSlideID--;
-    this.sliderMarginLeft = this.sliderMarginLeft + this.slideWidth;
+prev() {
+  if (this.activeSlideID === 1) {
+    return; 
   }
+  this.activeSlideID--;
+  this.sliderMarginLeft = this.sliderMarginLeft + this.slideWidth;
+}
+
 
   next() {
     const notShowingElementsCount = this.items.length - this.elementsToShow;
