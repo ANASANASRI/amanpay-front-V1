@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ScrolloptionsComponent } from './components/scrolloptions/scrolloptions.component';
 import { TokenComponent } from './components/token/token.component';
 import './app.component.css';
+import { SliderComponent } from './components/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,14 @@ import './app.component.css';
     WidgetComponent,
     HeaderComponent,
     ScrolloptionsComponent,
-    TokenComponent
+    TokenComponent,
+    SliderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

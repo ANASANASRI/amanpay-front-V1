@@ -6,6 +6,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./scrolloptions.component.css']
 })
 export class ScrolloptionsComponent {
+  
   @ViewChild('widgetsContent', { read: ElementRef }) public widgetsContent!: ElementRef<any>;
 
   public scrollRight(): void {
