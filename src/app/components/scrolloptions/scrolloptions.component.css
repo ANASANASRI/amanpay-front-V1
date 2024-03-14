@@ -1,0 +1,43 @@
+p {
+  font-family: Lato;
+}
+
+.info-widget {
+        width: 31.75%;
+        border: 1px solid black;
+        display: inline-block;
+      }
+
+      .middle {
+        float: left;
+        width: 90%;
+        overflow: auto;
+        white-space: nowrap;
+      }
+      
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow-x: auto; /* Enable horizontal scrolling */
+    }
+    
+    .scroll-button {
+        background-color: #ccc;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    
+    .info-widget {
+        padding: 10px;
+        margin-right: 10px;
+        background-color: #f0f0f0;
+        min-width: 100px; /* Fixed width for each widget */
+    }
+    
+    .info-widget:last-child {
+        margin-right: 0; /* Remove margin for the last widget */
+    }
+    
