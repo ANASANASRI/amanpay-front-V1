@@ -2,6 +2,7 @@
     
     <div class="flex w-full justify-between items-center">
 <!-- ///////////////////////////////// -->
+
         <button *ngIf="this.slideConfig.showLeftRightArrow" (click)="prev()" class="w-8 sm:w-10 sm:h-10 h-8 rounded-lg flex bg-green-100 hover:bg-green-300 text-slate-800 shadow-inner">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 sm:w-6 h-5 sm:h-6 m-auto">
@@ -11,16 +12,14 @@
         
 <!-- ///////////////////////////////// -->
         
-        <div #slideContainer class="w-full overflow-hidden ">
-            <ul #slider class="flex transition-all duration-300" [style.width.px]="this.sliderWidth"
-                [style.marginLeft.px]="this.sliderMarginLeft">
-                <li class="cursor-pointer" (click)="this.onSelect.emit(option)" [style.width.px]="this.slideWidth"
-                    *ngFor="let option of this.getItems()">
-                    <ng-content *ngTemplateOutlet="template || defaultTemplate;
-                context:{$implicit:option}"></ng-content>
+        <div #slideContainer class="w-full overflow-x-auto" style="overflow-y: hidden; scrollbar-width: none;">
+            <ul #slider class="flex transition-all duration-300" [style.width.px]="sliderWidth" [style.marginLeft.px]="sliderMarginLeft">
+                <li class="cursor-pointer" (click)="onSelect.emit(option)" [style.width.px]="slideWidth" *ngFor="let option of getItems()">
+                    <ng-content *ngTemplateOutlet="template || defaultTemplate; context:{$implicit:option}"></ng-content>
                 </li>
             </ul>
         </div>
+
 
 <!-- ///////////////////////////////// -->
 
@@ -47,10 +46,10 @@
   </div>
 
 <!-- Default template -->
-<ng-template #defaultTemplate let-item let-width="slideWidth">
+<ng-template #defaultTemplate let-item let-width="slideWidth" >
     <div
-        class="mx-5 rounded-2xl px-lg-0 py-3 text-slate-800 font-semibold text-center border-2 border-emerald-800 border-opacity-10 hover:shadow-lg hover:border-emerald-300 flex items-center justify-center">
-        <img src="{{ item.url }}" class="w-16 h-16 mr-2" alt="Icon"> <!-- Adjust width and height as needed -->
+        class="mx-1 rounded-2xl px-lg-0 py-3 hover:bg-green-50 text-slate-800 font-semibold text-center border-2 border-emerald-800 border-opacity-10 hover:shadow-lg hover:border-emerald-300 flex items-center justify-center">
+        <img src="{{ item.url }}" class="w-14 h-14 mr-2" alt="Icon"> <!-- Adjust width and height as needed -->
         <span>{{ item.name }}</span>
     </div>
 </ng-template>

@@ -12,13 +12,13 @@ export class SliderComponent implements OnInit, AfterViewInit {
   
   @Input('items')
   items: Option[] = [
-    { id: 1, name: 'Card', url: 'https://img.lovepik.com/free-png/202109/lovepik-credit-card-png-image_400174222_wh1200.png' },
-    { id: 2, name: 'Token', url: 'https://picsum.photos/200/300.jpg' },
-    { id: 3, name: 'Aman Pay', url: 'https://picsum.photos/200/300.jpg' },
-    { id: 4, name: 'Pay direct', url: 'Description of Pay direct' },
-    { id: 5, name: 'Option 5', url: 'Description of Option 5' },
-    { id: 6, name: 'Option 6', url: 'Description of Option 6' },
-    { id: 7, name: 'Option 7', url: 'Description of Option 7' },
+    { id: 1, name: 'Master Card', url: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/master-card-icon.png' },
+    { id: 2, name: 'Visa', url: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/visa-icon.png' },
+    { id: 3, name: 'Token', url: 'https://uxwing.com/wp-content/themes/uxwing/download/education-school/t-alphabet-round-icon.png' },
+    { id: 4, name: 'Pay direct', url: 'https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/credit-card-color-icon.png' },
+    { id: 5, name: 'Apple Pay', url: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/apple-pay-icon.png' },
+    { id: 6, name: 'Aman pay', url: 'https://uxwing.com/wp-content/themes/uxwing/download/crime-security-military-law/safe-icon.png' },
+    { id: 7, name: 'Paypal', url: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/paypal-color-icon.png' },
   ];
   
 
@@ -143,7 +143,6 @@ prev() {
       this.autoPlay()
     }, 1000);
   }
-
 
 }
 

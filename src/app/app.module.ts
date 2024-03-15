@@ -10,6 +10,8 @@ import { ScrolloptionsComponent } from './components/scrolloptions/scrolloptions
 import { TokenComponent } from './components/token/token.component';
 import './app.component.css';
 import { SliderComponent } from './components/slider/slider.component';
+import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
+import { CreditcardComponent } from './components/creditcard/creditcard.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { SliderComponent } from './components/slider/slider.component';
     ScrolloptionsComponent,
     TokenComponent,
     SliderComponent,
+    TarjetaComponent,
+    CreditcardComponent,
   ],
   imports: [
     BrowserModule,
