@@ -1,5 +1,5 @@
-/* Definiendo distribución del contenido de la card; width, flex, center, padding */
-.contenedor{
+/* Definiendo distribucion del contenido de la card; width, flex, center, padding */
+.container{
     width: 750px;
     max-width: 100%;
     margin: auto ;
@@ -44,7 +44,7 @@
 /* Estilo de fondo de la creditcard */
 .creditcard .delantera {
     width: 100%;
-    background: url(/src/assets/img/bg-tarjeta/bg-tarjeta-01.jpg);
+    background: url(/assets/img/bg-tarjeta/bg-tarjeta-01.jpg);
     background-size: cover;
     backface-visibility: hidden;
 }
@@ -80,7 +80,7 @@
     margin-bottom: .5rem
 }
 
-/* dandole estilo a los datos del usuario */
+/* dandole estilo a los datos del usuer */
 .delantera .grupo .numero,
 .delantera .grupo .nombre,
 .delantera .grupo .expiracion {
@@ -118,7 +118,7 @@
     height: 345px;
     max-width: 550px;
     min-width: 550px;
-    background: url(/src/assets/img/bg-tarjeta/bg-tarjeta-02.jpg);
+    background: url(/assets/img/bg-tarjeta/bg-tarjeta-02.jpg);
     background-size: cover;
     position: absolute;
     top: 0;
@@ -194,9 +194,9 @@
     bottom: 1rem
 }
 
-/* ---------------- Contenedor Boton ----------------*/
+/* ---------------- container Boton ----------------*/
 
-.contenedor-btn .btn-abrir-formulario {
+.container-btn .btn-abrir-formuler {
     background: #23d27b;
     color: #fff;
     font-size: 1.6rem;
@@ -213,17 +213,17 @@
     cursor: pointer;
 }
 
-.contenedor-btn .btn-abrir-formulario:hover {
-    background: #23d27b
+.container-btn .btn-abrir-formuler:hover {
+    background: #037b3f
 }
 
-.contenedor-btn .btn-abrir-formulario.active {
+.container-btn .btn-abrir-formuler.active {
     transform: rotate(45deg)
 }
 
-/* -------------------- Formulario creditcard -------------------- */
+/* -------------------- Formuler creditcard -------------------- */
 
-.formulario-creditcard { 
+.formuler-creditcard { 
     background: #fff;
     width: 100%;
     padding: 150px 30px 30px 30px;
@@ -237,18 +237,18 @@
     transition: clip-path 0.4s ease-out;
 }
 
-.formulario-creditcard.active{
+.formuler-creditcard.active{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-.formulario-creditcard label {
+.formuler-creditcard label {
     display: block;
     color: #7d8994;
     margin-bottom: 5px;   
 }
 
-.formulario-creditcard input,
-.formulario-creditcard select,
+.formuler-creditcard input,
+.formuler-creditcard select,
 .btn-enviar {
     border: 2px solid #CED6E0;
     font-size: 18px;
@@ -259,33 +259,33 @@
     border-radius: 5px;
 }
 
-.formulario-creditcard input:hover,
-.formulario-creditcard select:hover {
+.formuler-creditcard input:hover,
+.formuler-creditcard select:hover {
     border: 2px solid #93BDED;
 }
 
-.formulario-creditcard input:focus,
-.formulario-creditcard select:focus {
+.formuler-creditcard input:focus,
+.formuler-creditcard select:focus {
     outline: rgba(4,4,4);
     box-shadow: 1px 7px 10px -5px rgba(90,116,148,0.3);
 }
 
 
-.formulario-creditcard input {
+.formuler-creditcard input {
     margin-bottom: 20px;
     text-transform: uppercase;
 }
 
-.formulario-creditcard .flexbox {
+.formuler-creditcard .flexbox {
     display: flex;
     justify-content: space-between;
 }
 
-.formulario-creditcard .expira {
+.formuler-creditcard .expira {
     width: 100%;
 }
 
-.formulario-creditcard .ccvP {
+.formuler-creditcard .ccvP {
     min-width: 100px;
 }
 
@@ -303,17 +303,17 @@
     letter-spacing: .2rem;
 }
 
-.formulario-creditcard .grupo-select {
+.formuler-creditcard .grupo-select {
     width: 100%;
     margin-right: 1rem;
     position: relative;
 }
 
-.formulario-creditcard select {
+.formuler-creditcard select {
     -webkit-appearance: none;
 }
 
-.formulario-creditcard .grupo-select i {
+.formuler-creditcard .grupo-select i {
     position: absolute;
     color: #CED6E0;
     top: 1.07rem;
@@ -321,11 +321,11 @@
     transition: .3s ease all;
 }
 
-.formulario-creditcard .grupo-select:hover i {
+.formuler-creditcard .grupo-select:hover i {
     color: #23d283;
 }
 
-.formulario-creditcard .btn-enviar {
+.formuler-creditcard .btn-enviar {
     border: none;
     padding: .6rem;
     font-size: 1.5rem;
@@ -335,6 +335,6 @@
     cursor: pointer;
 }
 
-.formulario-creditcard .btn-enviar:hover{
+.formuler-creditcard .btn-enviar:hover{
     background: #18b12a;
 }

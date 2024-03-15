@@ -22,9 +22,11 @@ export class CreditcardComponent {
   year          : number[] | string   = 'YY'
   cvv           : string              = ''
 
+  isFormActive: boolean = true;
 
   constructor( ){
     document.getElementById('selectMes')?.innerText!= 'Month'
+    document.getElementById('formuler-creditcard')?.classList.add('active');
   }
   
   // Agregando clase que rota la creditcard
@@ -33,10 +35,10 @@ export class CreditcardComponent {
     
   }
 
-  // Mostrar formulario con boton giratorio
+  // Mostrar formuler con boton giratorio
   displayForm() {
-    document.getElementById('formulario-creditcard')?.classList.toggle('active')
-    document.getElementById('btn-abrir-formulario')?.classList.toggle('active')
+    document.getElementById('formuler-creditcard')?.classList.toggle('active')
+    document.getElementById('btn-abrir-formuler')?.classList.toggle('active')
   }
 
   complete( form: NgForm ) {
@@ -52,12 +54,6 @@ export class CreditcardComponent {
       .trim()
     
 
-    // document.getElementById('numero')?.textContent!=''
-
-    // Desarrollando para cambiar imagen dinamicamente segun codigo verificador
-
-    // Imagen Front
-
      switch (form.value.cardNumber.slice(0, 1)) {
 
       case "3":
@@ -65,7 +61,7 @@ export class CreditcardComponent {
         document.getElementById('logo-marca-trasera')!.innerHTML = ''
         let imagen2 = document.createElement('img')
         imagen2.setAttribute('width','150rem')
-        imagen2.src = '/src/assets/img/logos/americanexpress.png'
+        imagen2.src = 'assets/img/logos/americanexpress.png'
         document.getElementById('logo-marca')!.appendChild(imagen2)
         break;
 
@@ -74,7 +70,7 @@ export class CreditcardComponent {
         document.getElementById('logo-marca-trasera')!.innerHTML = ''
         let imagen = document.createElement('img')
         imagen.setAttribute('width','140rem')
-        imagen.src = '/src/assets/img/logos/visa.png'
+        imagen.src = '/assets/img/logos/visa.png'
         document.getElementById('logo-marca')!.appendChild(imagen)
         break;
 
@@ -83,7 +79,7 @@ export class CreditcardComponent {
         document.getElementById('logo-marca-trasera')!.innerHTML = ''
         let imagen1 = document.createElement('img')
         imagen1.setAttribute('width','130rem')
-        imagen1.src = '/src/assets/img/logos/mastercard.png'
+        imagen1.src = '/assets/img/logos/mastercard.png'
         document.getElementById('logo-marca')!.appendChild(imagen1)
         break;
 
@@ -92,7 +88,7 @@ export class CreditcardComponent {
         document.getElementById('logo-marca-trasera')!.innerHTML = ''
         let imagen3 = document.createElement('img')
         imagen3.setAttribute('width','180rem')
-        imagen3.src = '/src/assets/img/logos/discover.png'
+        imagen3.src = '/assets/img/logos/discover.png'
         document.getElementById('logo-marca')!.appendChild(imagen3)
         break;
 
@@ -109,7 +105,7 @@ export class CreditcardComponent {
         document.getElementById('logo-marca-trasera')!.innerHTML = ''
         let imagen2 = document.createElement('img')
         imagen2.setAttribute('width','150rem')
-        imagen2.src = '/src/assets/img/logos/americanexpress.png'
+        imagen2.src = '/assets/img/logos/americanexpress.png'
         document.getElementById('logo-marca-trasera')!.appendChild(imagen2)
         break;
 
@@ -117,7 +113,7 @@ export class CreditcardComponent {
         document.getElementById('logo-marca-trasera')!.innerHTML = ''
         let imagen = document.createElement('img')
         imagen.setAttribute('width','140rem')
-        imagen.src = '/src/assets/img/logos/visa.png'
+        imagen.src = '/assets/img/logos/visa.png'
         document.getElementById('logo-marca-trasera')!.appendChild(imagen)
         break;
 
@@ -125,7 +121,7 @@ export class CreditcardComponent {
         document.getElementById('logo-marca-trasera')!.innerHTML = ''
         let imagen1 = document.createElement('img')
         imagen1.setAttribute('width','130rem')
-        imagen1.src = '/src/assets/img/logos/mastercard.png'
+        imagen1.src = '/assets/img/logos/mastercard.png'
         document.getElementById('logo-marca-trasera')!.appendChild(imagen1)
         break;
 
@@ -133,7 +129,7 @@ export class CreditcardComponent {
         document.getElementById('logo-marca-trasera')!.innerHTML = ''
         let imagen3 = document.createElement('img')
         imagen3.setAttribute('width','180rem')
-        imagen3.src = '/src/assets/img/logos/discover.png'
+        imagen3.src = '/assets/img/logos/discover.png'
         document.getElementById('logo-marca-trasera')!.appendChild(imagen3)
         break;
 
@@ -168,7 +164,13 @@ export class CreditcardComponent {
     })
     
   } */
-
+  toggleForm() {
+    this.isFormActive = !this.isFormActive;
+    const formuler = document.getElementById('formuler-creditcard');
+    if (formuler) {
+      formuler.classList.toggle('active', this.isFormActive);
+    }
+  }
 
 
 }

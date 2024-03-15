@@ -1,4 +1,4 @@
-<div class="contenedor">
+<div class="container">
 
     <!-- creditcard Delantera -->
     <section class="creditcard" id="creditcard" #card (click)=" rotate(card) ">
@@ -6,7 +6,7 @@
             
             <div class="logo-marca" id="logo-marca"></div>
 
-            <img src="../../../assets/img/chip-tarjeta.png" class="chip" />
+            <img src="/assets/img/chip-tarjeta.png" class="chip" />
             <div class="datos">
                 <div class="grupo">
                     <p  *ngIf="cardNumber !== '' "
@@ -20,8 +20,7 @@
                 </div>
                 <div class="flexbox">
                     <div class="grupo">
-                        <p class="label" 
-                            >Card Holder</p>
+                        <p class="label" >Titulaire de la carte                        </p>
                         <p *ngIf=" cardName !== '' "
                            class="nombre"  
                            id="nombre"> {{ cardName | uppercase  }} 
@@ -32,7 +31,7 @@
                         </p>
                     </div>
                     <div class="grupo" id="expiracion">
-                        <p class="label">Expiracion date</p>
+                        <p class="label">Date d'expiration</p>
                         <p class="expiracion"><span id="mes"> {{ month }}</span>/<span id="year">{{ year }} </span></p>
                     </div>
                 </div>
@@ -53,18 +52,22 @@
     </section>
 
 
-    <!-- Boton abrir formulario -->
-    <div class="contenedor-btn" #button (click)="displayForm()">
-        <button class="btn-abrir-formulario" id="btn-abrir-formulario">
-            <i class="fas fa-plus"></i>
-        </button>
-    </div>
+    <!-- Boton abrir formuler -->
+    <!-- Boton abrir formuler -->
+<div class="container-btn" #button (click)="toggleForm()">
+    <button class="btn-abrir-formuler text-white" [class.active]="isFormActive" id="btn-abrir-formuler">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+        </svg>
+    </button>
+</div>
 
-    <!-- Formulario -->
-    <form class="formulario-creditcard" #formulario="ngForm"
-          id="formulario-creditcard">
+    
+
+    <!-- Formuler -->
+    <form class="formuler-creditcard active" #formuler="ngForm" id="formuler-creditcard">
         <div class="grupo">
-            <label for="inputNumero">Card number</label>
+            <label for="inputNumero">Numéro de carte</label>
             <input  type="text" 
                     id="inputNumero"
                     name="cardNumber"
@@ -73,11 +76,11 @@
                     minlength="4"
                     pattern="^\d*$"
                     autocomplete="off" 
-                    (keyup)="complete( formulario )"
+                    (keyup)="complete( formuler )"
                     required>
         </div>
         <div class="grupo">
-            <label for="inputNombre">Number</label>
+            <label for="inputNombre">Nombre</label>
             <input type="text" 
                    id="inputNombre" 
                    name="cardName"
@@ -90,7 +93,7 @@
 
         <div class="flexbox">
             <div class="grupo expira">
-                <label for="selectMes">Expiracion date</label>
+                <label for="selectMes">Date d'expiration</label>
                 <div class="flexbox">
                     <div class="grupo-select">
                         <select name="mes" 
@@ -131,10 +134,9 @@
             </div>
         </div>
         <div class="d-grid gap-2">
-            <button [disabled]="formulario.invalid"
+            <button [disabled]="formuler.invalid"
                     type="button" 
-                    class="btn btn-success row"
-                    >Send</button>
+                    class="btn btn-success row">Send</button>
         </div>
     </form>
 
