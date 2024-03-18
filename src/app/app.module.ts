@@ -6,23 +6,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WidgetComponent } from './components/widget/widget.component';
 import { HeaderComponent } from './components/header/header.component';
-import { ScrolloptionsComponent } from './components/scrolloptions/scrolloptions.component';
 import { TokenComponent } from './components/token/token.component';
 import './app.component.css';
 import { SliderComponent } from './components/slider/slider.component';
-import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
 import { CreditcardComponent } from './components/creditcard/creditcard.component';
+import { HomeComponent } from './components/home/home.component';
+import { LogoscrollerComponent } from './components/logoscroller/logoscroller.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WidgetComponent,
     HeaderComponent,
-    ScrolloptionsComponent,
     TokenComponent,
     SliderComponent,
-    TarjetaComponent,
     CreditcardComponent,
+    HomeComponent,
+    LogoscrollerComponent,
   ],
   imports: [
     BrowserModule,

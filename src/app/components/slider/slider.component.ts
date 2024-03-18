@@ -9,6 +9,9 @@ import { SlideConfig } from '../../models/slide-config.model';
 })
 export class SliderComponent implements OnInit, AfterViewInit {
 
+  selectedItemIndex: number = -1; // Initialize with an index that doesn't exist
+
+  
   
   @Input('items')
   items: Option[] = [
@@ -37,6 +40,7 @@ export class SliderComponent implements OnInit, AfterViewInit {
   @Input('slideConfig')
   slideConfig = new SlideConfig();
 
+  @Output() optionClicked = new EventEmitter<number>();
 
 
   sliderContainerWidth = 0;
@@ -143,6 +147,13 @@ prev() {
       this.autoPlay()
     }, 1000);
   }
+  //////////////////////////////////////////
+  // Inside your component class
+  handleOptionClick(index: number) {
+    this.optionClicked.emit(index);
+    this.selectedItemIndex = index;
+  }
+
 
 }
 

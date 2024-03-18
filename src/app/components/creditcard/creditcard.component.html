@@ -1,3 +1,5 @@
+<!-- <app-logoscroller></app-logoscroller> -->
+<div class="border border-emerald-500 rounded-3xl p-1 hover:border-emerald-300">
 <div class="container">
 
     <!-- creditcard Delantera -->
@@ -22,12 +24,12 @@
                     <div class="grupo">
                         <p class="label" >Titulaire de la carte                        </p>
                         <p *ngIf=" cardName !== '' "
-                           class="nombre"  
-                           id="nombre"> {{ cardName | uppercase  }} 
+                           class="name"  
+                           id="name"> {{ cardName | uppercase  }} 
                         </p>
                         <p *ngIf=" cardName == '' "
-                           class="nombre"  
-                           id="nombre"> Anas anasri 
+                           class="name"  
+                           id="name"> Anas anasri 
                         </p>
                     </div>
                     <div class="grupo" id="expiracion">
@@ -80,9 +82,9 @@
                     required>
         </div>
         <div class="grupo">
-            <label for="inputNombre">Nombre</label>
+            <label for="inputname">Titulaire de la carte </label>
             <input type="text" 
-                   id="inputNombre" 
+                   id="inputname" 
                    name="cardName"
                    pattern="/!?^[a-zA-Z\d][a-zA-Z]*$/igm"
                    [(ngModel)]= " cardName "
@@ -140,4 +142,5 @@
         </div>
     </form>
 
+</div>
 </div>

@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 /* ----------------- Estilos globales de la creditcard ----------------- */
@@ -36,7 +36,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: -10px 10px 15px rgba(48, 60, 74, 0.6) ;
+    box-shadow: -10px 10px 15px rgba(33, 64, 41, 0.6) ;
 }
 
 /* --------------- creditcard Delantera --------------- */
@@ -44,7 +44,7 @@
 /* Estilo de fondo de la creditcard */
 .creditcard .delantera {
     width: 100%;
-    background: url(/assets/img/bg-tarjeta/bg-tarjeta-01.jpg);
+    background: url(/assets/img/bg-tarjeta/bg-card.jpg);
     background-size: cover;
     backface-visibility: hidden;
 }
@@ -82,7 +82,7 @@
 
 /* dandole estilo a los datos del usuer */
 .delantera .grupo .numero,
-.delantera .grupo .nombre,
+.delantera .grupo .name,
 .delantera .grupo .expiracion {
     letter-spacing: 1.5px;
     color: #FFF;
@@ -118,7 +118,8 @@
     height: 345px;
     max-width: 550px;
     min-width: 550px;
-    background: url(/assets/img/bg-tarjeta/bg-tarjeta-02.jpg);
+    background: url(/assets/img/bg-tarjeta/bg-card-verso.jpg);
+    /* background: url(/assets/img/carte-WORLD.png); */
     background-size: cover;
     position: absolute;
     top: 0;
@@ -206,7 +207,7 @@
     bottom: 1.5rem;
     border:none;
     border-radius: 100%;
-    box-shadow: -5px 4px 8px rgba(24, 182, 82, 0.4);
+    box-shadow: -5px 4px 8px rgba(40, 171, 88, 0.646);
     z-index: 10;
     padding: .2rem;
     transition: all .2s ease;
@@ -261,7 +262,7 @@
 
 .formuler-creditcard input:hover,
 .formuler-creditcard select:hover {
-    border: 2px solid #93BDED;
+    border: 2px solid #6EE7B7;
 }
 
 .formuler-creditcard input:focus,
@@ -322,7 +323,7 @@
 }
 
 .formuler-creditcard .grupo-select:hover i {
-    color: #23d283;
+    color: #6EE7B7;
 }
 
 .formuler-creditcard .btn-enviar {
@@ -330,11 +331,11 @@
     padding: .6rem;
     font-size: 1.5rem;
     color: #fff;
-    background: #23d283;
-    box-shadow: 2px 2px 10px 0px rgba(0, 212, 106, 0.4);
+    background: #6EE7B7;
+    box-shadow: 2px 2px 10px 0px rgba(11, 209, 110, 0.4);
     cursor: pointer;
 }
 
 .formuler-creditcard .btn-enviar:hover{
-    background: #18b12a;
+    background: #6EE7B7;
 }

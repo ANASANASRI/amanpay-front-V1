@@ -14,7 +14,10 @@
         
         <div #slideContainer class="w-full overflow-x-auto" style="overflow-y: hidden; scrollbar-width: none;">
             <ul #slider class="flex transition-all duration-300" [style.width.px]="sliderWidth" [style.marginLeft.px]="sliderMarginLeft">
-                <li class="cursor-pointer" (click)="onSelect.emit(option)" [style.width.px]="slideWidth" *ngFor="let option of getItems()">
+                <li class="cursor-pointer" [style.width.px]="slideWidth" *ngFor="let option of getItems(); 
+                let i = index" 
+                (click)="handleOptionClick(i)"
+                [ngClass]="{ 'bg-green-50 rounded-2xl': selectedItemIndex === i, 'transparent': selectedItemIndex !== i }">
                     <ng-content *ngTemplateOutlet="template || defaultTemplate; context:{$implicit:option}"></ng-content>
                 </li>
             </ul>

@@ -1,9 +1,20 @@
 <div class="containerwidget">
-<div class="spacer"></div>
-<app-header></app-header>
 
-<div class="spacer"></div>
-<app-slider></app-slider>
+    <div class="spacer"></div>
+    <app-header></app-header>
 
-<app-creditcard></app-creditcard> 
+    <div class="spacer"></div>
+    <app-slider (optionClicked)="handleOptionClicked($event)"></app-slider>
+
+    <div *ngIf="selectedOptionIndex !== undefined; else defaultOption">
+
+        <app-creditcard *ngIf="selectedOptionIndex === 0"></app-creditcard>
+        <app-token *ngIf="selectedOptionIndex === 2"></app-token>
+
+    </div>
+
+    <ng-template #defaultOption>
+        <app-home></app-home>
+    </ng-template>
+
 </div>

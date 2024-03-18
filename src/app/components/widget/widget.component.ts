@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class WidgetComponent {
 
+  selectedOptionIndex: number | undefined;
+
+  handleOptionClicked(index: number) {
+    console.log('Index of clicked option:', index);
+    this.selectedOptionIndex = index;
+    console.log('selected',this.selectedOptionIndex);
+  }
+
 }
