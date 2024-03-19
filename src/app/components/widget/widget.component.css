@@ -1,11 +1,15 @@
 .containerwidget {
-  width: 1000px;
+  width: 900px;
   max-width: 100%;
   margin: 0 auto; /* Center the container horizontally */
   flex-direction: column; /* Arrange child elements vertically */
   align-items: center; /* Center child elements horizontally */
+  z-index: 3;
 }
 
 .spacer {
   height: 34px; 
+}
+.spacer2 {
+  height: 27px; 
 }

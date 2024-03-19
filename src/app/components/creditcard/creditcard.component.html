@@ -1,14 +1,18 @@
 <!-- <app-logoscroller></app-logoscroller> -->
-<div class="border border-emerald-500 rounded-3xl p-1 hover:border-emerald-300">
+<!-- <div class="border border-emerald-500 rounded-3xl p-1 hover:border-emerald-300"> -->
 <div class="container">
 
+        
     <!-- creditcard Delantera -->
     <section class="creditcard" id="creditcard" #card (click)=" rotate(card) ">
+        
+        <div class="absolute inset-0 bg-gradient-to-r from-emerald-400 to-emerald-100 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-3 sm:rounded-3xl z-0"></div>
+        
         <div class="delantera">
-            
             <div class="logo-marca" id="logo-marca"></div>
 
             <img src="/assets/img/chip-tarjeta.png" class="chip" />
+
             <div class="datos">
                 <div class="grupo">
                     <p  *ngIf="cardNumber !== '' "
@@ -55,7 +59,6 @@
 
 
     <!-- Boton abrir formuler -->
-    <!-- Boton abrir formuler -->
 <div class="container-btn" #button (click)="toggleForm()">
     <button class="btn-abrir-formuler text-white" [class.active]="isFormActive" id="btn-abrir-formuler">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -65,9 +68,10 @@
 </div>
 
     
-
     <!-- Formuler -->
     <form class="formuler-creditcard active" #formuler="ngForm" id="formuler-creditcard">
+        
+        <div class="relative bg-white shadow-md sm:rounded-3xl sm:p-10">
         <div class="grupo">
             <label for="inputNumero">Numéro de carte</label>
             <input  type="text" 
@@ -140,7 +144,8 @@
                     type="button" 
                     class="btn btn-success row">Send</button>
         </div>
+        </div>
     </form>
 
 </div>
-</div>
+<!-- </div> -->

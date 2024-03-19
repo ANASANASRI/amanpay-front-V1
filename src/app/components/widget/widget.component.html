@@ -6,6 +6,8 @@
     <div class="spacer"></div>
     <app-slider (optionClicked)="handleOptionClicked($event)"></app-slider>
 
+    <div class="spacer2"></div>
+
     <div *ngIf="selectedOptionIndex !== undefined; else defaultOption">
 
         <app-creditcard *ngIf="selectedOptionIndex === 0"></app-creditcard>

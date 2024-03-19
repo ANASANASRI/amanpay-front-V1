@@ -12,6 +12,10 @@ import { SliderComponent } from './components/slider/slider.component';
 import { CreditcardComponent } from './components/creditcard/creditcard.component';
 import { HomeComponent } from './components/home/home.component';
 import { LogoscrollerComponent } from './components/logoscroller/logoscroller.component';
+import { ErrorComponent } from './components/error/error.component';
+import { StepsComponent } from './components/token/steps/steps.component';
+import { GuideComponent } from './components/token/guide/guide.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -23,13 +27,18 @@ import { LogoscrollerComponent } from './components/logoscroller/logoscroller.co
     CreditcardComponent,
     HomeComponent,
     LogoscrollerComponent,
+    ErrorComponent,
+    StepsComponent,
+    GuideComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
     ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync('noop')
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

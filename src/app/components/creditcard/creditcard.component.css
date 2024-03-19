@@ -1,12 +1,12 @@
 /* Definiendo distribucion del contenido de la card; width, flex, center, padding */
 .container{
-    width: 750px;
     max-width: 100%;
     margin: auto ;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
+    height: min-content;
 }
 
 /* ----------------- Estilos globales de la creditcard ----------------- */
@@ -41,12 +41,15 @@
 
 /* --------------- creditcard Delantera --------------- */
 
+
 /* Estilo de fondo de la creditcard */
 .creditcard .delantera {
     width: 100%;
     background: url(/assets/img/bg-tarjeta/bg-card.jpg);
     background-size: cover;
     backface-visibility: hidden;
+    position: relative;
+
 }
 
 /* posicion de la marca en la parte superior de la creditcard */
@@ -119,7 +122,6 @@
     max-width: 550px;
     min-width: 550px;
     background: url(/assets/img/bg-tarjeta/bg-card-verso.jpg);
-    /* background: url(/assets/img/carte-WORLD.png); */
     background-size: cover;
     position: absolute;
     top: 0;
@@ -229,10 +231,8 @@
     width: 100%;
     padding: 150px 30px 30px 30px;
     max-width: 90%;
-    border-radius: 10px;
     position: relative;
     bottom: 10rem;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, .13);
     z-index: 1;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     transition: clip-path 0.4s ease-out;

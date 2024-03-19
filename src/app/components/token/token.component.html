@@ -1,15 +1,37 @@
-<div class="border border-emerald-100 rounded-3xl p-5">
-    <div class="flex justify-between mt-5 items-center">
-        <div class="flex items-center gap-3">
-            <img class="w-12 h-12 rounded-full" src="../../../assets/img/card_payment.png" alt="">
-            <p class="text-slate-500 font-light">a</p>
+    <app-steps></app-steps>
+    <div class="  py-6 flex flex-col justify-center sm:py-12">
+        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+            
+            <div class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-emerald-200 shadow-lg transform -skew-y-1 sm:skew-y-0 sm:-rotate-3 sm:rounded-3xl z-0"></div>
+
+            <div class="relative py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+                <div class="max-w-md mx-auto formuler">
+
+                    <div>
+                        <h1 class="text-2xl font-semibold">Paiement par token</h1>
+                    </div>
+                    <div class="divide-y divide-gray-200">
+
+                        <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+                            <div class="relative">
+                                <input autocomplete="off" id="name" name="name" type="name" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-emerald-500" placeholder="Nom et prenom" />
+                                <label for="name" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Nom et prenom</label>
+                            </div>
+
+                            <div class="relative">
+                                <input autocomplete="off" id="email" name="email" type="text" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-emerald-500" placeholder="Email address" />
+                                <label for="email" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Email Address</label>
+                            </div>
+                            
+                            <div class="relative">
+                                <button class="bg-emerald-600 text-white rounded-md px-2 py-1">Obtenir votre code commande</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                
+            </div>
         </div>
-        <div>
-            <button class="px-5 py-2 bg-emerald-50 rounded-md text-opacity-80 text-emerald-600">a</button>
-        </div>        
     </div>
-    <h3 class="leading-tight mt-3 text-slate-700 transition-all duration-500 hover:text-emerald-600 font-semibold text-lg">
-        a
-    </h3>
-    <img class="w-full rounded-2xl" src="../../../assets/img/carte-WORLD.png" alt="">
-</div>
