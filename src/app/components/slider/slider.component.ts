@@ -1,6 +1,6 @@
 import { Option } from './../../model/option/option.module';
 import { AfterViewInit, Component, ContentChild, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, TemplateRef, ViewChild } from '@angular/core';
-import { SlideConfig } from '../../models/slide-config.model';
+import { SlideConfig } from '../../model/slide-config.model';
 
 @Component({
   selector: 'app-slider',
